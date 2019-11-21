@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once 'db_connect.php';
 
@@ -13,19 +13,12 @@ while ($row = $query->fetch_assoc()) {
 	if($row['active'] == 1) {
 		$active = '<label class="label label-success">Active</label>';
 	} else {
-		$active = '<label class="label label-danger">Deactive</label>'; 
+		$active = '<label class="label label-danger">Deactive</label>';
 	}
 
 	$actionButton = '
-	<div class="btn-group">
-	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Action <span class="caret"></span>
-	  </button>
-	  <ul class="dropdown-menu">
-	    <li><a type="button" data-toggle="modal" data-target="#editMemberModal" onclick="editMember('.$row['id'].')"> <span class="glyphicon glyphicon-edit"></span> Edit</a></li>
-	    <li><a type="button" data-toggle="modal" data-target="#removeMemberModal" onclick="removeMember('.$row['id'].')"> <span class="glyphicon glyphicon-trash"></span> Remove</a></li>	    
-	  </ul>
-	</div>
+	<a type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editMemberModal" onclick="editMember('.$row['id'].')"> <span class="glyphicon glyphicon-edit"></span> Edit</a>
+	<a type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#removeMemberModal" onclick="removeMember('.$row['id'].')"> <span class="glyphicon glyphicon-trash"></span> Remove</a>
 		';
 
 	$output['data'][] = array(

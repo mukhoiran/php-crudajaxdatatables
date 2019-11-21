@@ -4,9 +4,9 @@
 	<title>CRUD SYSTEM</title>
 
 	<!-- bootstrap css -->
-	<link rel="stylesheet" type="text/css" href="assests/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<!-- datatables css -->
-	<link rel="stylesheet" type="text/css" href="assests/datatables/datatables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 
 </head>
 <body>
@@ -25,14 +25,14 @@
 
 				<br /> <br /> <br />
 
-				<table class="table" id="manageMemberTable">					
+				<table class="table table-hover" id="manageMemberTable">
 					<thead>
 						<tr>
 							<th>S.no</th>
-							<th>Name</th>													
+							<th>Name</th>
 							<th>Address</th>
-							<th>Contact</th>								
-							<th>Active</th>
+							<th>Contact</th>
+							<th>Status</th>
 							<th>Option</th>
 						</tr>
 					</thead>
@@ -49,7 +49,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><span class="glyphicon glyphicon-plus-sign"></span>	Add Member</h4>
 	      </div>
-	      
+
 	      <form class="form-horizontal" action="php_action/create.php" method="POST" id="createMemberForm">
 
 	      <div class="modal-body">
@@ -57,7 +57,7 @@
 
 			  <div class="form-group"> <!--/here teh addclass has-error will appear -->
 			    <label for="name" class="col-sm-2 control-label">Name</label>
-			    <div class="col-sm-10"> 
+			    <div class="col-sm-10">
 			      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
 				<!-- here the text will apper  -->
 			    </div>
@@ -83,14 +83,14 @@
 			      	<option value="2">Deactivate</option>
 			      </select>
 			    </div>
-			  </div>			 		
+			  </div>
 
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	        <button type="submit" class="btn btn-primary">Save changes</button>
 	      </div>
-	      </form> 
+	      </form>
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
@@ -125,15 +125,15 @@
 	        <h4 class="modal-title"><span class="glyphicon glyphicon-edit"></span> Edit Member</h4>
 	      </div>
 
-		<form class="form-horizontal" action="php_action/update.php" method="POST" id="updateMemberForm">	      
+		<form class="form-horizontal" action="php_action/update.php" method="POST" id="updateMemberForm">
 
 	      <div class="modal-body">
-	        	
+
 	        <div class="edit-messages"></div>
 
 			  <div class="form-group"> <!--/here teh addclass has-error will appear -->
 			    <label for="editName" class="col-sm-2 control-label">Name</label>
-			    <div class="col-sm-10"> 
+			    <div class="col-sm-10">
 			      <input type="text" class="form-control" id="editName" name="editName" placeholder="Name">
 				<!-- here the text will apper  -->
 			    </div>
@@ -159,7 +159,7 @@
 			      	<option value="2">Deactivate</option>
 			      </select>
 			    </div>
-			  </div>	
+			  </div>
 	      </div>
 	      <div class="modal-footer editMemberModal">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -172,11 +172,12 @@
 	<!-- /edit modal -->
 
 	<!-- jquery plugin -->
-	<script type="text/javascript" src="assests/jquery/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<!-- bootstrap js -->
-	<script type="text/javascript" src="assests/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<!-- datatables js -->
-	<script type="text/javascript" src="assests/datatables/datatables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 	<!-- include custom index.js -->
 	<script type="text/javascript" src="custom/js/index.js"></script>
 
